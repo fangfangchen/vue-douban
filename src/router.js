@@ -5,6 +5,7 @@ import Search from './components/Search.vue';
 import Mine from './components/Mine.vue';
 
 const routes = [
+	{ path: '/', component: Splash },
 	{ path: '/splash', component: Splash },
 	{ path: '/home', component: Home },
 	{ path: '/search', component: Search},
