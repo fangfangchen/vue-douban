@@ -1,15 +1,12 @@
 import VueRouter from 'vue-router';
-import Splash from './components/Splash.vue';
-import Home from './components/Home.vue';
-import Search from './components/Search.vue';
-import Mine from './components/Mine.vue';
+import App from './App';
 
 const routes = [
-	{ path: '/', component: Splash },
-	{ path: '/splash', component: Splash },
-	{ path: '/home', component: Home },
-	{ path: '/search', component: Search},
-	{ path: '/mine', component: Mine}
+	{ path: '/', component: App.components.Splash },
+	{ path: '/splash', component: App.components.Splash },
+	{ path: '/home', component: App.components.Home },
+	{ path: '/search', component: App.components.Search},
+	{ path: '/mine', component: App.components.Mine}
 ];
 
 const router = new VueRouter({

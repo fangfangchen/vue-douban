@@ -51,7 +51,7 @@
   Vue.component('Mine', Mine);
 
   export default {
-    name: 'tabbar',
+    name: 'home',
     data: function() {
       return {
         selected: 'board'
