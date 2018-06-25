@@ -48,44 +48,48 @@
 
 	export default {
 		name: 'board',
-	}
+	};
 </script>
 
-<style>
-	.mint-swipe.banner {
-		width: 100%;
-		height: 200px;
-	}
-	.mint-swipe.banner img {
-		width: 100%;
-		height: 200px;
-		object-fit: cover;
-	}
-	.board-list {
-		padding: 0 15px;
-	}
-	.board-title {
-	  font-size: 22px;
-	  margin: 20px 0;
-	}
+<style lang="scss" scoped>
+	.home {
+		.banner {
+			width: 100%;
+			height: 200px;
 
-	.board-tips {
-	  color: #aaa;
-	  font-size: 12px;
-	  margin-bottom: 30px;
-	}
-	.board-list li {
-		height: 60px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		border: 1px solid #eee;
-		margin-top: 10px;
-		padding: 10px 15px;
-		border-radius: 4px;
-	}
-	.board-list li img {
-		width: 20px;
-		height: 20px;
+			img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+		}
+		.board-list {
+			padding: 0 15px;
+		}
+		.board-title {
+		  font-size: 22px;
+		  margin: 20px 0;
+		}
+
+		.board-tips {
+		  color: #aaa;
+		  font-size: 12px;
+		  margin-bottom: 30px;
+		}
+		.board-list li {
+			height: 60px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border: 1px solid #eee;
+			margin-top: 10px;
+			padding: 10px 15px;
+			border-radius: 4px;
+
+			img {
+				width: 20px;
+				height: 20px;
+			}
+		}
 	}
 </style>

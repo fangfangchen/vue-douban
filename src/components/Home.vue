@@ -37,9 +37,9 @@
     TabContainerItem,
     Cell
   } from 'mint-ui';
-  import Board from './Board.vue';
-  import Search from './Search.vue';
-  import Mine from './Mine.vue';
+  import Board from './Board';
+  import Search from './Search';
+  import Mine from './Mine';
 
   Vue.component(Tabbar.name, Tabbar);
   Vue.component(TabItem.name, TabItem);

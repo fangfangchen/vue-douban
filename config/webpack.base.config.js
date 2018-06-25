@@ -40,6 +40,12 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.(png|svg|gif|jpg|jpe?g|icon?|eot|svg|ttf|woff)$/,
         use: [{
           loader: 'url-loader?limit=8192&name=[name]-[hash].[ext]'
@@ -71,8 +77,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
-        'vue': 'vue/dist/vue.js'
-    }
+      'vue': 'vue/dist/vue.js'
+    },
+    extensions: ['.js', '.vue']
   },
   cssLoaders: cssLoaders
 };

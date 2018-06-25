@@ -12,8 +12,8 @@ Vue.use(VueRouter);
 
 new Vue({
 	router,
-  template: '<App />',
-  components: {
-    App
-  },
+	template: '<App />',
+	components: {
+		App
+	},
 }).$mount('#app');

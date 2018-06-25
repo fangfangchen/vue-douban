@@ -30,10 +30,10 @@
 <script>
 	export default {
 		name: 'mine',
-	}
+	};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.history-title {
 		border-left: 5px solid #eee;
 		padding-left: 10px;
