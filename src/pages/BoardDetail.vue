@@ -1,17 +1,17 @@
 <template>
-	<div class="board-detail">
+	<div class="board-detail" v-if="data">
 		<div class="info">
-			<img v-if="data" :src="data.images.large" alt="">
-			<p v-if="data" class="title">{{data.title}}</p>
+			<img :src="data.images.large" alt="">
+			<p class="title">{{data.title}}</p>
 		</div>
-		<p v-if="data" class="average">评分：{{data.rating.average}}</p>
-		<p class="director" v-if="data">导演：
+		<p class="average">评分：{{data.rating.average}}</p>
+		<p class="director">导演：
 			<span v-for="(director, index) in data.directors" :key="index">{{director.name}}<span v-if="index !== data.directors.length - 1"> / </span></span>
 		</p>
-		<p class="cast" v-if="data">主演：
+		<p class="cast">主演：
 			<span v-for="(cast, index) in data.casts" :key="index">{{cast.name}}<span v-if="index !== data.casts.length - 1"> / </span></span>
 		</p>
-		<div class="summary" v-if="data">
+		<div class="summary">
 			<p>摘要：</p>
 			<p>{{ data.summary }}</p>
 		</div>
