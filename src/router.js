@@ -5,8 +5,7 @@ const routes = [
 	{ path: '/', component: App.components.Splash },
 	{ path: '/splash', component: App.components.Splash },
 	{ path: '/home', component: App.components.Home },
-	{ path: '/search', component: App.components.Search},
-	{ path: '/mine', component: App.components.Mine}
+	{ path: '/board-list/:type', component: App.components.BoardList},
 ];
 
 const router = new VueRouter({

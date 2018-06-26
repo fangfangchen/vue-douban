@@ -7,7 +7,8 @@ const proxy = require('http-proxy-middleware');
 const app = express();
 const config = require('./webpack.dev.config');
 const compiler = webpack(config);
-const api = 'http://api.douban.com/v2';
+// const api = 'http://api.douban.com/v2';
+const api = 'https://douban.uieee.com/v2';
 
 app.use(webpackHotMiddleware(compiler));
 

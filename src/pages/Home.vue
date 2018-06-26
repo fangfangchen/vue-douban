@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <mt-tabbar v-model="selected" fixed>
       <mt-tab-item id="board">
         榜单
@@ -62,3 +62,9 @@
     }
   };
 </script>
+
+<style scoped lang="scss">
+  .home {
+    padding-bottom: 50px;
+  }
+</style>

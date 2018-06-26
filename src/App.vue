@@ -7,16 +7,14 @@
 <script>
 	import Splash from './pages/Splash';
 	import Home from './pages/Home';
-	import Search from './pages/Search';
-	import Mine from './pages/Mine';
+	import BoardList from './pages/BoardList';
 
   export default {
     name: 'app',
     components: {
     	Splash,
     	Home,
-    	Search,
-    	Mine,
+    	BoardList,
     }
   };
 </script>

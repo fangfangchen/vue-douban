@@ -32,7 +32,7 @@
 		mounted() {
 			this.loading = true;
 			douban
-				.find('coming_soon', 1, 5)
+				.find('coming_soon', 1, 3)
 				.then(res => {
 					console.log(res);
 					const subjects = res.data.subjects;
@@ -69,6 +69,8 @@
 			border: 2px solid #fff;
 			border-radius: 6px;
 			padding: 10px 20px;
+			font-weight: 500;
+			font-size: 18px;
 		}
 	}
 </style>

@@ -15,20 +15,13 @@
 			<p class="board-title">豆瓣电影榜单集合</p>
     	<p class="board-tips">最新，最IN的影视收集～</p>
     	<ul>
-    		<li>
-    			<span>正在上映</span>
-    			<img src="../assets/images/enter.png" alt="">
-    		</li>
-    		<li>
-    			<span>即将上映</span>
-    			<img src="../assets/images/enter.png" alt="">
-    		</li>
-    		<li>
-    			<span>Top250</span>
-    			<img src="../assets/images/enter.png" alt="">
-    		</li>
-    		<li>
-    			<span>北美票房榜</span>
+    		<li
+    			v-for="(list, index) in lists"
+    			:key="index"
+    			:data-param="list.param"
+    			@click="jumpToBoardList"
+    		>
+    			<span>{{ list.text }}</span>
     			<img src="../assets/images/enter.png" alt="">
     		</li>
     	</ul>
@@ -48,6 +41,29 @@
 
 	export default {
 		name: 'board',
+		data() {
+			return {
+				lists: [{
+	        text: '正在热映',
+	        param: 'in_theaters'
+	      }, {
+	        text: '即将上映',
+	        param: 'coming_soon'
+	      }, {
+	        text: 'Top250',
+	        param: 'top250'
+	      }, {
+	        text: '北美票房榜',
+	        param: 'us_box'
+	      }]
+	    }
+		},
+		methods: {
+			jumpToBoardList(event) {
+				const param = event.target.dataset.param;
+				this.$router.push({ path: `/board-list/${param}` });
+			}
+		}
 	};
 </script>
 
