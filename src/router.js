@@ -4,7 +4,7 @@ import App from './App';
 const routes = [
 	{ path: '/', component: App.components.Splash },
 	{ path: '/splash', component: App.components.Splash },
-	{ path: '/home', component: App.components.Home },
+	{ path: '/home/:tab', component: App.components.Home },
 	{ path: '/board-list/:type', component: App.components.BoardList},
 ];
 

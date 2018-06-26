@@ -54,11 +54,13 @@
     name: 'home',
     data: function() {
       return {
-        selected: 'board'
+        selected: this.$route.params.tab
       }
     },
-    props: {
-      
+    watch: {
+      selected: function(newVal, oldVal) {
+        this.$router.push({ path: `/home/${newVal}` });
+      }
     }
   };
 </script>

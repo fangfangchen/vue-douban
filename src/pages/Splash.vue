@@ -34,7 +34,6 @@
 			douban
 				.find('coming_soon', 1, 3)
 				.then(res => {
-					console.log(res);
 					const subjects = res.data.subjects;
 					this.items = subjects;
 				})
@@ -44,7 +43,7 @@
 		},
 		methods: {
 			jumpToHome() {
-				this.$router.push({ path: '/home' });
+				this.$router.push({ path: '/home/board' });
 			}
 		}
 	};
