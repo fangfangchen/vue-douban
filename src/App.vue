@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="root">
     <router-view></router-view>
   </div>
 </template>
@@ -8,6 +8,7 @@
 	import Splash from './pages/Splash';
 	import Home from './pages/Home';
 	import BoardList from './pages/BoardList';
+  import BoardDetail from './pages/BoardDetail';
 
   export default {
     name: 'app',
@@ -15,12 +16,13 @@
     	Splash,
     	Home,
     	BoardList,
+      BoardDetail,
     }
   };
 </script>
 
 <style>
-#app {
+#root {
   height: 100%;
   background-color: #fff;
 }

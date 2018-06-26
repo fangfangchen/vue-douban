@@ -7,16 +7,18 @@
 			  infinite-scroll-disabled="loading"
 			  infinite-scroll-distance="10"
 			>
-				<li v-for="(list, index) in lists" :key="index" :data-id="list.id">
-					<div class="list-left">
-						<img v-lazy="list.images.small" alt="">
-						<div class="list-info">
-							<span class="title">{{ list.title }}</span>
-							<span class="time" v-if="list.mainland_pubdate">上映时间：{{ list.mainland_pubdate }}</span>
-							<span class="director" v-if="list.directors[0]">导演：{{ list.directors[0].name }}</span>
+				<li v-for="(list, index) in lists" :key="index">
+					<router-link :to="{ path: '/board-detail', query: { id: list.id }}">
+						<div class="list-left">
+							<img v-lazy="list.images.small" alt="">
+							<div class="list-info">
+								<span class="title">{{ list.title }}</span>
+								<span class="time" v-if="list.mainland_pubdate">上映时间：{{ list.mainland_pubdate }}</span>
+								<span class="director" v-if="list.directors[0]">导演：{{ list.directors[0].name }}</span>
+							</div>
 						</div>
-					</div>
-					<span class="average">{{ list.rating.average }}</span>
+						<span class="average">{{ list.rating.average }}</span>
+					</router-link>
 				</li>
 			</ul>
 			<p class="page-infinite-loading">
@@ -131,50 +133,53 @@
 		}
 
 		li {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 10px 15px;
-			border-bottom: 1px solid #ddd;
-
-			.list-left {
+			a {
 				display: flex;
+				justify-content: space-between;
 				align-items: center;
+				padding: 10px 15px;
+				border-bottom: 1px solid #ddd;
+				color: #323232;
 
-				img {
-					width: 60px;
-					height: 60px;
-					margin-right: 10px;
-					background-color: #eee;
-				}
-
-				.list-info {
+				.list-left {
 					display: flex;
-					flex-direction: column;
+					align-items: center;
 
-					.title {
-						word-break: break-word;
+					img {
+						width: 60px;
+						height: 60px;
+						margin-right: 10px;
+						background-color: #eee;
+					}
+
+					.list-info {
+						display: flex;
+						flex-direction: column;
+
+						.title {
+							word-break: break-word;
+						}
 					}
 				}
-			}
 
-			.average {
-				color: red;
-				font-weight: 500;
-				font-size: 18px;
-			}
+				.average {
+					color: red;
+					font-weight: 500;
+					font-size: 18px;
+				}
 
-			.time {
-				font-size: 12px;
-			}
+				.time {
+					font-size: 12px;
+				}
 
-			.director {
-				font-size: 14px;
-			}
+				.director {
+					font-size: 14px;
+				}
 
-			.time,
-			.director {
-				color: #aaa;
+				.time,
+				.director {
+					color: #aaa;
+				}
 			}
 		}
 	}
