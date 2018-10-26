@@ -1,1 +1,1 @@
-web: node ./config/server
+web: npm start
